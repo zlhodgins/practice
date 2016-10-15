@@ -1,0 +1,21 @@
+#------------------------------------------------------------------
+# test.kat test file for Finesse
+#
+# Dummy example to test if Finesse is working
+# http://www.gwoptics.org/finesse/ 
+# 17.05.2014
+#------------------------------------------------------------------
+
+l i1 1 0 n1
+s s0 1 n1 n3
+
+m m1 0.9 0.0001 0 n3 n4
+s s_cav 1200 n4 n5
+m m2 0.9 0.1 0 n5 n6
+attr m2 Rc 1400
+
+cav cavity1 m1 n4 m2 n5
+maxtem 3
+pd pow n4
+noxaxis 
+trace 2 
